@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ff4d8d" />
+
+    <title>Will you be my Valentine?</title>
+    <meta
+      name="description"
+      content="Jednoduchá valentýnská stránka s jedním správným tlačítkem."
+    />
+
+    <meta property="og:title" content="Budeš můj Valentýn?" />
+    <meta
+      property="og:description"
+      content="Klikni na jediné správné tlačítko."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="photo-wall" aria-hidden="true">
+        <figure class="wall-pic wall-pic--1">
+          <img src="public/scscwvsd.jpeg" alt="" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="wall-pic wall-pic--2">
+          <img src="public/svnslkdv.jpeg" alt="" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="wall-pic wall-pic--3">
+          <img src="public/scscswcdwcs.jpeg" alt="" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="wall-pic wall-pic--4">
+          <img src="public/jvenofvkms.jpeg" alt="" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="decor" aria-hidden="true">
+        <svg class="flower flower--br1" viewBox="0 0 150 150">
+          <defs>
+            <linearGradient id="br1_petal" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffe5f2" />
+              <stop offset="1" stop-color="#fff0a8" />
+            </linearGradient>
+            <radialGradient id="br1_center" cx="45%" cy="45%" r="60%">
+              <stop offset="0" stop-color="#fff7d6" />
+              <stop offset="1" stop-color="#ffd36c" />
+            </radialGradient>
+          </defs>
+          <g transform="translate(75 75)">
+            <g
+              fill="url(#br1_petal)"
+              stroke="rgba(255,93,157,0.14)"
+              stroke-width="2"
+              opacity="0.92"
+            >
+              <ellipse cx="0" cy="-46" rx="18" ry="30" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(45)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(90)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(135)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(180)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(225)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(270)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(315)" />
+            </g>
+            <circle r="16" fill="url(#br1_center)" opacity="0.96" />
+            <circle r="7" fill="#fffbe8" opacity="0.95" />
+          </g>
+        </svg>
+
+        <svg class="flower flower--br2" viewBox="0 0 150 150">
+          <defs>
+            <linearGradient id="br2_petal" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffe5f2" />
+              <stop offset="1" stop-color="#fff0a8" />
+            </linearGradient>
+            <radialGradient id="br2_center" cx="45%" cy="45%" r="60%">
+              <stop offset="0" stop-color="#fff7d6" />
+              <stop offset="1" stop-color="#ffd36c" />
+            </radialGradient>
+          </defs>
+          <g transform="translate(75 75)">
+            <g
+              fill="url(#br2_petal)"
+              stroke="rgba(255,93,157,0.14)"
+              stroke-width="2"
+              opacity="0.92"
+            >
+              <ellipse cx="0" cy="-46" rx="18" ry="30" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(45)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(90)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(135)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(180)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(225)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(270)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(315)" />
+            </g>
+            <circle r="16" fill="url(#br2_center)" opacity="0.96" />
+            <circle r="7" fill="#fffbe8" opacity="0.95" />
+          </g>
+        </svg>
+
+        <svg class="flower flower--br3" viewBox="0 0 150 150">
+          <defs>
+            <linearGradient id="br3_petal" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffe5f2" />
+              <stop offset="1" stop-color="#fff0a8" />
+            </linearGradient>
+            <radialGradient id="br3_center" cx="45%" cy="45%" r="60%">
+              <stop offset="0" stop-color="#fff7d6" />
+              <stop offset="1" stop-color="#ffd36c" />
+            </radialGradient>
+          </defs>
+          <g transform="translate(75 75)">
+            <g
+              fill="url(#br3_petal)"
+              stroke="rgba(255,93,157,0.14)"
+              stroke-width="2"
+              opacity="0.92"
+            >
+              <ellipse cx="0" cy="-46" rx="18" ry="30" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(45)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(90)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(135)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(180)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(225)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(270)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(315)" />
+            </g>
+            <circle r="16" fill="url(#br3_center)" opacity="0.96" />
+            <circle r="7" fill="#fffbe8" opacity="0.95" />
+          </g>
+        </svg>
+
+        <svg class="flower flower--br4" viewBox="0 0 150 150">
+          <defs>
+            <linearGradient id="br4_petal" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffe5f2" />
+              <stop offset="1" stop-color="#fff0a8" />
+            </linearGradient>
+            <radialGradient id="br4_center" cx="45%" cy="45%" r="60%">
+              <stop offset="0" stop-color="#fff7d6" />
+              <stop offset="1" stop-color="#ffd36c" />
+            </radialGradient>
+          </defs>
+          <g transform="translate(75 75)">
+            <g
+              fill="url(#br4_petal)"
+              stroke="rgba(255,93,157,0.14)"
+              stroke-width="2"
+              opacity="0.92"
+            >
+              <ellipse cx="0" cy="-46" rx="18" ry="30" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(45)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(90)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(135)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(180)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(225)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(270)" />
+              <ellipse cx="0" cy="-46" rx="18" ry="30" transform="rotate(315)" />
+            </g>
+            <circle r="16" fill="url(#br4_center)" opacity="0.96" />
+            <circle r="7" fill="#fffbe8" opacity="0.95" />
+          </g>
+        </svg>
+
+        <svg class="heart heart--1" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ff86b7"
+            opacity="0.88"
+          />
+        </svg>
+        <svg class="heart heart--2" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffd36c"
+            opacity="0.82"
+          />
+        </svg>
+        <svg class="heart heart--3" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffb5d1"
+            opacity="0.8"
+          />
+        </svg>
+        <svg class="heart heart--4" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffeaa6"
+            opacity="0.78"
+          />
+        </svg>
+        <svg class="heart heart--5" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffd6e7"
+            opacity="0.76"
+          />
+        </svg>
+        <svg class="heart heart--6" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ff5d9d"
+            opacity="0.74"
+          />
+        </svg>
+        <svg class="heart heart--7" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffd36c"
+            opacity="0.72"
+          />
+        </svg>
+        <svg class="heart heart--8" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ff86b7"
+            opacity="0.7"
+          />
+        </svg>
+        <svg class="heart heart--9" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffb5d1"
+            opacity="0.68"
+          />
+        </svg>
+        <svg class="heart heart--10" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffeaa6"
+            opacity="0.66"
+          />
+        </svg>
+
+        <svg class="heart heart--11" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ff86b7"
+            opacity="0.78"
+          />
+        </svg>
+        <svg class="heart heart--12" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffd36c"
+            opacity="0.76"
+          />
+        </svg>
+        <svg class="heart heart--13" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffb5d1"
+            opacity="0.74"
+          />
+        </svg>
+        <svg class="heart heart--14" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffeaa6"
+            opacity="0.72"
+          />
+        </svg>
+        <svg class="heart heart--15" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ff5d9d"
+            opacity="0.7"
+          />
+        </svg>
+        <svg class="heart heart--16" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffd6e7"
+            opacity="0.7"
+          />
+        </svg>
+        <svg class="heart heart--17" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ffd36c"
+            opacity="0.68"
+          />
+        </svg>
+        <svg class="heart heart--18" viewBox="0 0 64 64">
+          <path
+            d="M32 54s-18-11-24-22C2 21 7 10 18 10c6 0 11 3 14 8 3-5 8-8 14-8 11 0 16 11 10 22-6 11-24 22-24 22z"
+            fill="#ff86b7"
+            opacity="0.66"
+          />
+        </svg>
+      </div>
+
+	      <section class="card" aria-label="Valentýnská otázka">
+        <p class="kicker">Halo misis shonen :3</p>
+        <h1 class="title">
+          Will you be my <span class="accent">Valentine</span>?
+        </h1>
+
+	        <div class="cta" id="cta">
+	          <a class="btn btn-yes" id="yesBtn" href="celebrate.html" role="button">Yes</a>
+		          <div
+		            class="no-wrap"
+		            id="noWrap"
+		            aria-label="Ne tlačítko (hodně plaché)"
+		          >
+		            <button class="btn btn-no" id="noBtn" type="button">No &gt;:(</button>
+		          </div>
+		        </div>
+        <p class="hint" id="hint" aria-live="polite"></p>
+		      </section>
+
+      <section class="result" id="result" hidden aria-label="Potvrzení">
+        <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+        <div class="result-card">
+          <h2 class="result-title">JUPIJEJ TESIM SE!</h2>
+          <p class="result-text">
+            Oficiálně potvrzeno: <strong>jsi můj Valentýn</strong>.
+          </p>
+          <p class="result-text" id="timestamp"></p>
+          <div class="result-actions">
+            <button class="btn btn-secondary" id="copyBtn" type="button">
+              Zkopírovat zprávu
+            </button>
+            <button class="btn btn-secondary" id="againBtn" type="button">
+              Ještě jednou
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="boom"
+        id="boomOverlay"
+        hidden
+        aria-label="Efekt při pokusu o Ne"
+      >
+	        <div class="boom-spot" id="boomSpot" aria-hidden="true">
+	          <img
+	            class="boom-png"
+	            id="boomPng"
+	            src="public/65d8f6c7-52b3-47ba-a588-ac41f7d85203.png"
+	            alt=""
+	            loading="eager"
+	            decoding="async"
+	            hidden
+	          />
+	          <video
+	            class="boom-video"
+	            id="boomVideo"
+	            preload="auto"
+	            playsinline
+            webkit-playsinline
+          >
+            <source src="public/sdcs.mov" />
+          </video>
+          <canvas
+            class="boom-key"
+            id="boomKeyCanvas"
+            aria-hidden="true"
+          ></canvas>
+          <canvas
+            class="boom-canvas"
+            id="boomCanvas"
+            aria-hidden="true"
+          ></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

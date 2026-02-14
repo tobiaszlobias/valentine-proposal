@@ -1,0 +1,133 @@
+.celebrate {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hearts {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5000;
+}
+
+.cat {
+  position: fixed;
+  top: 50%;
+  width: clamp(140px, 22vw, 260px);
+  height: clamp(140px, 22vw, 260px);
+  transform: translateY(-50%);
+  z-index: 4900;
+  pointer-events: none;
+  filter: drop-shadow(0 22px 46px rgba(255, 93, 157, 0.14));
+  opacity: 0.98;
+}
+
+.cat--left {
+  left: clamp(-8px, 2vw, 18px);
+}
+
+.cat--right {
+  right: clamp(-8px, 2vw, 18px);
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.cat-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0; /* prevent green flash; canvas is the visible layer */
+}
+
+.cat-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cat.cat--raw .cat-video {
+  opacity: 1;
+}
+
+.cat.cat--raw .cat-canvas {
+  display: none;
+}
+
+.celebrate-card {
+  position: relative;
+  z-index: 6000;
+  width: min(720px, 100%);
+  padding: clamp(22px, 4vw, 34px);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 93, 157, 0.22);
+  box-shadow:
+    0 22px 60px rgba(130, 60, 90, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.42) inset;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.celebrate-title {
+  margin: 0;
+  font-size: clamp(32px, 6.5vw, 64px);
+  letter-spacing: -0.04em;
+  color: var(--btn);
+  text-wrap: balance;
+}
+
+.celebrate-again {
+  margin-top: 18px;
+}
+
+.celebrate-sound {
+  margin-top: 18px;
+}
+
+.celebrate-sound.is-on {
+  background: rgba(255, 214, 231, 0.7);
+  border-color: rgba(255, 93, 157, 0.26);
+}
+
+.celebrate-text {
+  margin: 10px 0 0;
+  font-size: clamp(18px, 2.6vw, 24px);
+  font-weight: 800;
+  color: rgba(40, 18, 28, 0.92);
+}
+
+.celebrate-sub {
+  margin: 14px 0 0;
+  color: rgba(40, 18, 28, 0.62);
+  font-weight: 600;
+}
+
+.celebrate-back {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 93, 157, 0.22);
+  color: rgba(40, 18, 28, 0.86);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.celebrate-back:hover {
+  filter: brightness(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hearts {
+    display: none;
+  }
+}

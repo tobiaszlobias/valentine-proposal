@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ff4d8d" />
+
+    <title>JUPIUUUIIIII</title>
+    <meta name="description" content="Oslavná stránka s padajícími srdíčky." />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="celebrate.css" />
+  </head>
+  <body>
+    <main class="celebrate">
+      <canvas class="hearts" id="hearts" aria-hidden="true"></canvas>
+
+      <div class="cat cat--left" aria-hidden="true">
+        <video
+          class="cat-video"
+          id="catVideoLeft"
+          preload="auto"
+          playsinline
+          webkit-playsinline
+          autoplay
+          muted
+          loop
+        >
+          <source src="public/CATSC.mov" />
+        </video>
+        <canvas class="cat-canvas" id="catCanvasLeft" aria-hidden="true"></canvas>
+      </div>
+
+      <div class="cat cat--right" aria-hidden="true">
+        <video
+          class="cat-video"
+          id="catVideoRight"
+          preload="auto"
+          playsinline
+          webkit-playsinline
+          autoplay
+          muted
+          loop
+        >
+          <source src="public/CATSC.mov" />
+        </video>
+        <canvas class="cat-canvas" id="catCanvasRight" aria-hidden="true"></canvas>
+      </div>
+
+      <section class="celebrate-card" aria-label="Oslava">
+        <h1 class="celebrate-title">JUPIUUUIIIII tesim se na zitrek :*</h1>
+        <button class="btn btn-secondary celebrate-sound" id="soundBtn" type="button">
+          Zapnout hudbu
+        </button>
+        <a class="btn btn-secondary celebrate-again" href="index.html">Zkusit znova</a>
+      </section>
+    </main>
+
+    <script src="celebrate.js" defer></script>
+  </body>
+</html>
