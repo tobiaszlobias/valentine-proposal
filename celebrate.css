@@ -88,15 +88,6 @@
   margin-top: 18px;
 }
 
-.celebrate-sound {
-  margin-top: 18px;
-}
-
-.celebrate-sound.is-on {
-  background: rgba(255, 214, 231, 0.7);
-  border-color: rgba(255, 93, 157, 0.26);
-}
-
 .celebrate-text {
   margin: 10px 0 0;
   font-size: clamp(18px, 2.6vw, 24px);

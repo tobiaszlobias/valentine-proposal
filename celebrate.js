@@ -271,6 +271,7 @@ function setupGreenScreen(catVideo, catCanvas) {
 function tryAutoPlayMuted(video) {
   if (!video) return;
   video.muted = true;
+  video.volume = 0;
   try {
     const p = video.play();
     if (p && typeof p.catch === "function") p.catch(() => {});
@@ -279,34 +280,40 @@ function tryAutoPlayMuted(video) {
   }
 }
 
-function enableSingleSoundOnce() {
-  // Play both videos muted first (autoplay-friendly),
-  // then on first tap/click enable audio only for the left one.
-  tryAutoPlayMuted(catVideoLeft);
-  tryAutoPlayMuted(catVideoRight);
-
-  const onGesture = async () => {
-    window.removeEventListener("pointerdown", onGesture);
-    if (!catVideoLeft) return;
-    catVideoLeft.muted = false;
-    catVideoLeft.volume = 0.9;
-    try {
-      await catVideoLeft.play();
-    } catch {
-      // ignore
-    }
-  };
-
-  window.addEventListener("pointerdown", onGesture, { once: true });
+async function tryEnableAudio(video) {
+  if (!video) return false;
+  try {
+    video.muted = false;
+    video.volume = 0.9;
+    const p = video.play();
+    if (p && typeof p.then === "function") await p;
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 const keyLeft = setupGreenScreen(catVideoLeft, catCanvasLeft);
 const keyRight = setupGreenScreen(catVideoRight, catCanvasRight);
 
+function ensureVideoPlaysMuted(video) {
+  if (!video) return;
+  video.muted = true;
+  video.volume = 0;
+  try {
+    const p = video.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  } catch {
+    // ignore
+  }
+}
+
 function startCats() {
   if (!catVideoLeft || !catVideoRight) return;
 
-  enableSingleSoundOnce();
+  // Start both videos muted (autoplay-friendly) so the chroma-key animation runs.
+  ensureVideoPlaysMuted(catVideoLeft);
+  ensureVideoPlaysMuted(catVideoRight);
 
   // Start keying once metadata is available (seeking not needed here).
   const startKeying = () => {
@@ -317,8 +324,33 @@ function startCats() {
   if (catVideoLeft.readyState >= 1) startKeying();
   else catVideoLeft.addEventListener("loadedmetadata", startKeying, { once: true });
 
-  // Keep the right video muted forever (so we don't get double audio).
+  catVideoLeft.muted = true;
   catVideoRight.muted = true;
+
+  // Keep both videos running even after refresh / bfcache / tab switching.
+  const ensureBoth = () => {
+    ensureVideoPlaysMuted(catVideoLeft);
+    ensureVideoPlaysMuted(catVideoRight);
+  };
+
+  window.addEventListener("pageshow", ensureBoth);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) ensureBoth();
+  });
+
+  // Use the LEFT video's audio as background "hudba" (only one sound),
+  // but only enable it on the first user gesture (browser autoplay policies).
+  window.addEventListener(
+    "pointerdown",
+    async () => {
+      // Ensure visuals keep playing, then enable audio on the left only.
+      ensureBoth();
+      await tryEnableAudio(catVideoLeft);
+      catVideoRight.muted = true;
+      catVideoRight.volume = 0;
+    },
+    { once: true },
+  );
 }
 
 startCats();
